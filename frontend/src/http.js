@@ -1,3 +1,4 @@
+// need to change url in production'
 const apiURL = "http://localhost:8080";
 
 export async function fetchAvailablePlaces() {

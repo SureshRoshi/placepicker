@@ -10,3 +10,16 @@ PlacePicker is a React practice project showcasing travel destinations. This web
 4. Start the frontend and backend servers with `npm start`.
 
 Feel free to explore and enjoy your virtual travel experience!
+
+**Note for Production:**
+If deploying in a production environment, update the backend API URL in the frontend code (`frontend/src/http.js`):
+
+```javascript
+const apiURL = "https://your-production-backend.com";
+```
+
+(or)
+
+```javascript
+const apiURL = "https://your-production-backend-ip.com";
+```
