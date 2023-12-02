@@ -1,5 +1,7 @@
+const apiURL = "http://localhost:8080";
+
 export async function fetchAvailablePlaces() {
-  const response = await fetch("http://localhost:8080/places");
+  const response = await fetch(`${apiURL}/places`);
   const resData = await response.json();
 
   if (!response.ok) {
@@ -9,7 +11,7 @@ export async function fetchAvailablePlaces() {
 }
 
 export async function updateUserPlaces(places) {
-  const response = await fetch("http://localhost:8080/user-places", {
+  const response = await fetch(`${apiURL}/user-places`, {
     method: "PUT",
     body: JSON.stringify({ places }),
     headers: {
@@ -24,7 +26,7 @@ export async function updateUserPlaces(places) {
 }
 
 export async function fetchUserPlaces() {
-  const response = await fetch("http://localhost:8080/user-places");
+  const response = await fetch(`${apiURL}/user-places`);
   const resData = await response.json();
 
   if (!response.ok) {
